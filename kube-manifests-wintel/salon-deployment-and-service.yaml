@@ -19,6 +19,13 @@ spec:
           image: 067267740034.dkr.ecr.ap-southeast-1.amazonaws.com/wintel/salon
           ports:
             - containerPort: 80
+          volumeMounts:
+            - name: persistent-storage
+              mountPath: /var/log/nginx
+      volumes:
+        - name: persistent-storage
+          persistentVolumeClaim:
+              claimName: efs-claim
 ---
 apiVersion: v1
 kind: Service
