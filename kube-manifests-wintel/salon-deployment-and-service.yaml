@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app2-nginx
-          image: 067267740034.dkr.ecr.ap-southeast-1.amazonaws.com/wintel/salon
+          image: 512411020124.dkr.ecr.ap-southeast-1.amazonaws.com/wintel/salon
           ports:
             - containerPort: 80
           volumeMounts:
