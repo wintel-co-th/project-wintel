@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app1-nginx
-          image: 067267740034.dkr.ecr.ap-southeast-1.amazonaws.com/wintel/highway
+          image: 512411020124.dkr.ecr.ap-southeast-1.amazonaws.com/wintel/highway
           ports:
             - containerPort: 80
 ---
