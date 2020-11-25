@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app2-nginx
-          image: 067267740034.dkr.ecr.ap-southeast-1.amazonaws.com/wintel/salon
+          image: 067267740034.dkr.ecr.ap-southeast-1.amazonaws.com/wintel/salon:v2
           ports:
             - containerPort: 80
           volumeMounts:
@@ -35,7 +35,7 @@ metadata:
     app: app2-nginx
   annotations:
 #Important Note:  Need to add health check path annotations in service level if we are planning to use multiple targets in a load balancer
-    alb.ingress.kubernetes.io/healthcheck-path: /salon/index.html
+    #alb.ingress.kubernetes.io/healthcheck-path: /salon/index.html
     #alb.ingress.kubernetes.io/healthcheck-path: /*
 spec:
   type: NodePort
