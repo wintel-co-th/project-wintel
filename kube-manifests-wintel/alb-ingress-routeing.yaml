@@ -21,16 +21,21 @@ metadata:
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
 spec:
   rules:
-    - http:
+    - host: highway.chaiyapon.com
+      http:
         paths:
-          - path: /
+          - path: /*
             backend:
               serviceName: highway-nginx-nodeport-service
-              servicePort: 80                        
-          - path: /
+              servicePort: 80
+    - host: salon.chaiyapon.com
+      http:
+        paths:
+          - path: /*
             backend:
               serviceName: salon-nginx-nodeport-service
-              servicePort: 80            
+              servicePort: 80
+
 # Important Note-1: In path based routing order is very important, if we are going to use  "/*", try to use it at the end of all rules.         
 
     
