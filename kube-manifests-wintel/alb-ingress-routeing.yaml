@@ -23,11 +23,11 @@ spec:
   rules:
     - http:
         paths:
-          - path: /highway/*
+          - path: /
             backend:
               serviceName: highway-nginx-nodeport-service
               servicePort: 80                        
-          - path: /salon/*
+          - path: /
             backend:
               serviceName: salon-nginx-nodeport-service
               servicePort: 80            
